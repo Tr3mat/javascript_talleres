@@ -1,0 +1,43 @@
+<!-- # Enunciado
+
+Hacer una funcion que dada una dirección IP válida (IPv4), devuelve una versión modificada de esa dirección IP.
+
+Una dirección IP con colmillos reemplaza cada punto "." con "[.]".
+
+### Ejemplo 1:
+**Input:** address = ```"1.1.1.1"```
+
+**Output:** ```"1[.]1[.]1[.]1"```
+
+### Example 2:
+**Input:** address = ```"255.100.50.0"```
+
+**Output:** ```"255[.]100[.]50[.]0"```
+ 
+
+## Constraints:
+La dirección proporcionada es una dirección IPv4 válida. 
+
+**Nota:** Haga una función que valide si una dirección IP es válida y luego use esta en el desarrollo de la función que se propone en en el enunciado.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function modifica(){
+            let ip=prompt("ingrese la ip")
+            let ipm= ip.replace(/\./g,"[.]")
+            console.log(ipm)    
+        }
+
+        modifica()
+    </script>
+</body>
+</html>
