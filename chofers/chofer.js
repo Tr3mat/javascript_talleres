@@ -13,6 +13,7 @@ const buildFila = (nombre,lunes,martes,miercoles,jueves,viernes,sabado,total) =>
             <tr>`;
     };
     str="";
+    res="";
     let count =0;
     let totales = [];
     let nomb= [];  
@@ -32,15 +33,22 @@ const buildFila = (nombre,lunes,martes,miercoles,jueves,viernes,sabado,total) =>
 
     let numeroMayor = Math.max(...totales);
     let posicion = totales.indexOf(numeroMayor);
+    let chofm=nomb[posicion]
 
     console.log(nomb[posicion]);
 
 
 
 // console.log(martes);
+res= buil (chofm);
+document.getElementById("mayor").innerHTML = res;
 
 str += buildFila(nombre,martes,lunes,miercoles,jueves,viernes,sabado,total);
     document.getElementById("respuesta").innerHTML = str;
 }
+const buil = (chofm) => {
+    return ` <p>El conductor con mayor cantidad de kilometros fue: <strong>${chofm}<strong></p>`
+    };
+    
 
     
