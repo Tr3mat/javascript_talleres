@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+              <h1><i class="bi bi-bookmark-check"> </i>Calcular de Interes Compuesto</h1>
+            </div>
+            <div class="col-12">
+              <p class="lead">Ejercicio Resuelto en Clase</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>AÑO</th>
+                            <th>MONTO EN DEPOSITO</th>
+                        </tr>
+                    </thead>
+    
+                    <tbody id="respuesta">
+    
+                    </tbody>
+                </table>
+    
+            </div>
+            <div class="col-3">
+                <input type="button" value="Calcular interés" 
+                onclick="montoDeposito();"
+                class="btn btn-primary">
+    
+            </div>
+        </div>
+        </div>
+      
+    <script>
+        const buildFila = (anio, monto) => {
+            return `<tr>
+                  <td>${anio}</td>
+                  <td>${monto.toFixed(2)}</td>
+              </tr>`;
+          }
+          
+          function montoDeposito() {
+            let p = Number(prompt("Ingrese el valor de la inversión: "));
+            let r = 0.05;
+            let n = 10;
+          
+            let strHTML = "";
+          
+            console.log("AÑO \t\t MONTO EN DEPOSITO");
+            console.log("-".repeat(20));
+            let monto = 0;
+            for (let i = 1; i <= n; i++) {
+              monto = calcularInteres(p, r, i);
+              console.log(`${i} \t\t ${monto.toFixed(2)}`);
+              strHTML += buildFila(i, monto);
+            }
+          
+            document.getElementById("respuesta").innerHTML = strHTML;
+            //return strHTML;
+          }
+          
+          function mensaje() {
+            alert("Voy bien");
+          }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

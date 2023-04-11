@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>   let matriz=[["salmon","halibut"],
+    ["coral","reef"]];
+
+console.log(matriz);
+console.log(matriz[1][0]);
+---------------------------------
+let matrix=[];
+let fil=2, col=2;
+for (let i=0; i>fil;i++)
+    matrix[i]=new Array(col)
+    console.log(matrix)
+----------------------------------------------------------
+
+
+
+
+
+
+    <script>
+    function crearMatriz(matriz, fil, col) {
+    for(let i=0; i<fil; i++)
+        matriz[i] = new Array(col);
+
+    return matriz;
+}
+
+function imprimirMatriz(matriz) {
+    for(let f=0; f < matriz.length; f++) {
+        let fila = "";
+        for(c=0; c < matriz[f].length; c++) {
+            fila += matriz[f][c] + "\t\t";
+            
+        }
+        console.log(fila);
+        // console.log(matriz[f].join("\t\t"));
+    }
+}
+
+function sumarFila(m){
+    let vsum=[];
+    for(let f=0; f < m.length; f++) {
+        vsum[f]=0;
+        for(c=0; c < ma[f].length; c++) {
+            vsum[f]+= m[f][c];
+        }
+
+    }
+    return vsum
+}
+
+const llenarMatriz = function(m) {
+    for(let f=0; f < m.length; f++) {
+        for(let c=0; c < m[f].length; c++) {
+            m[f][c] = prompt(`Ingrese el dato para m[${f+1}][${c+1}]`)
+        }
+    }
+}
+
+let matriz = [];
+let fil= 2, col =3;
+// matriz = crearMatriz(matriz, fil, col);
+// console.log(matriz);
+
+// let manga= [["papa", "yuca"], ["maiz", "peto", "arracacha"], ["sancocho", "mute"]];
+// imprimirMatriz(manga);
+
+fil = Number(prompt("Ingrese el número de filas"));
+col = Number(prompt("Ingrese el número de columnas"));
+matriz = crearMatriz(matriz, fil, col);
+llenarMatriz(matriz);
+imprimirMatriz(matriz)
+
+
+
+matris=[[4,8,8],[6,7,9],[5,8,9],[1,2,9]];
+console.log(sumarFila(matris))
+    </script>
+</body>
+</html>

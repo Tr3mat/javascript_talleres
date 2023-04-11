@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hacer una funcion que reciba un vector y qque devuelva el numero mayor
+    <script>
+        function numeros(vector){
+            if(vector.length===0)
+            return null;
+            let mayor =vector[0]
+            for (let i=1; i< vector.length; i++){
+                if (vector[i] > mayor)
+                mayor=vector[i]
+            }
+            return mayor;
+        }
+
+        let v =[1,9,2,4,3]
+        console.log(v);
+        let v2=numeros(v);
+        console.log(v2);
+
+
+
+    </script>
+</body>
+</html>

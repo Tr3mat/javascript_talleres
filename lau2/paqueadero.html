@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let placa = prompt("Digite la placa");
+        let horaI = Number(prompt("Hora Ingreso"));
+        let horaS = Number(prompt("Hora Salida:"));
+      
+
+        function CantHoras(horaI, horaS) {
+
+            if (horaS < horaI) {
+                horaT = 24 - horaI + horaS;
+            }
+            else {
+                horaT = horaS - horaI;
+            }
+            return horaT;
+        }
+        horaT = CantHoras(horaI, horaS);
+        function Valor(horaT) {
+            if (horaT < 3) {
+                pagar = 2
+            }
+            else if ((horaT > 3) && (horaT < 19)) {
+                pagar = 2 + ((horaT - 3) * 0.5);
+            }
+
+            else {
+                pagar = 10;
+            }
+            return pagar;
+
+        }
+        pagar = Valor(horaT);
+        alert(`valor a pagar es ${pagar}`);
+        let nuevo = prompt("Ingreso otro cliente? responda (si/no)");
+        while (nuevo!="no") {
+            
+            pagar = Valor(horaT);
+            
+            let placa = prompt("Digite la placa");
+            let horaI = Number(prompt("Hora Ingreso"));
+            let horaS = Number(prompt("Hora Salida:"));
+            
+            alert(`valor a pagar es ${pagar}`);
+            let nuevo = prompt("Ingreso otro cliente? responda (si/no)");
+        }
+
+
+    </script>
+</body>
+
+</html>

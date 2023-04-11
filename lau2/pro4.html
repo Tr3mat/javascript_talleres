@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+              <h1>proveedores</h1>
+            </div>
+            <div class="col-12">
+            
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre del proveedor</th>
+                            <th>Nombre del producto</th>
+                            <th>precio del 2022</th>
+                            <th>precio del 2023</th>
+                            
+                        </tr>
+                    </thead>
+    
+                    <tbody id="respuesta">
+    
+                    </tbody>
+                </table>
+    
+            </div>
+            <div class="col-3">
+                <input type="button" value="imprimir" 
+                onclick="imprimir();"
+                class="btn btn-primary">
+    
+            </div>
+        </div>
+        </div>
+    <script>
+        function imprimir() {
+            let cant=Number(prompt("Cantidad de proveedores"));
+            let nom=prompt("nombre del proveedor: ");
+            let nompro=prompt("nombre del producto: ");
+            let p2022=prompt("precio del año 2022: ");
+            let p2023=prompt("precio del año 2023: ");
+            
+          
+        }
+
+    </script>
+</body>
+</html>
