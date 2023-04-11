@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cálculo del Interés Compuesto</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+   <!-- CSS BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+ <div class="container">
+    <div class="row">
+        <div class="col-12">
+          <h1><i class="bi bi-bookmark-check"> </i>Calcular de Interes Compuesto</h1>
+        </div>
+        <div class="row">
+            <div class="col">
+          <form action="" name="formu">
+            <label for="exampleFormControlInput1" class="form-label">Interes</label>
+            <input class="form-control form-control-lg" name="inte" type="text" placeholder="porcentaje de interes" aria-label=".form-control-lg example">
+          </form>
+        </div>
+        <div class="col">
+            <label for="exampleFormControlInput1" class="form-label">valor de prestamo</label>
+            <input class="form-control form-control-lg" name="prest" type="text" placeholder="valor de prestamo" aria-label=".form-control-lg example">
+            
+        </div>
+        <div class="col">
+            <label for="exampleFormControlInput1" class="form-label">cuotas</label>
+            <input class="form-control form-control-lg" name="cuotas" type="text" placeholder="cantidad de cuotas" aria-label=".form-control-lg example">
+            
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>AÑO</th>
+                        <th>MONTO EN DEPOSITO</th>
+                    </tr>
+                </thead>
+
+                <tbody id="respuesta">
+
+                </tbody>
+            </table>
+
+        </div>
+        <div class="col-3">
+            <input type="button" value="Calcular interés" 
+            onclick="montoDeposito();"
+            class="btn btn-primary">
+
+        </div>
+    </div>
+    </div>
+  
+  
+  
+  
+  
+  <script src="prestamo.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  
+</body>
+
+</html>
