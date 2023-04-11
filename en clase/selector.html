@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="parrafo" id="mi-id">hola este es mi parrafo</p>
+    <p class="parrafo" id="mi-id-dos">segundo este es mi parrafo</p>
+    <ul id="lista-dinamica"></ul>
+
+    <script>
+        console.log(document.head);
+        console.log(document.body);
+        console.log(document.getElementById("mi-id"));
+        console.log(document.querySelector("#mi-id"));
+        console.log(document.querySelector(".mi-id"));
+        console.log(document.querySelector("p"));
+        console.log(document.querySelectorAll("p"));
+
+        //modificar elementos
+        const parrafo=document.querySelector(".parrafo")
+        parrafo.textContent="parrafo dinamico";
+        parrafo.innerHTML="<b>cambios<b>";
+
+        //agregar elementos
+        const lista=document.getElementById("lista-dinamica")
+
+        //creamos el <li>
+        const li=document.createElement("li")
+        const lu=document.createElement("li")
+
+        //agregar texto al li
+        li.textContent="mi <li>dinamico";
+        lu.textContent="nuevo";
+        
+        //incorporamos al <ul>
+        lista.appendChild(li);
+        lista.appendChild(lu);
+
+
+
+        //fragment
+        const ArrayItem =["item","item1","item2"];
+
+        //crear fragmento
+
+        const fragment=document.createDocumentFragment();
+        arrayItem.array.forEach((item) => {
+
+        const li=document.createElement("li");
+        lu.textContent=item;
+        fragment.appendChild(li);
+
+
+
+        });
+        lista.appendChild(fragment);
+
+
+            
+        
+    </script>
+</body>
+</html>
